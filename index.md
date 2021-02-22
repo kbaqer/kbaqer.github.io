@@ -10,7 +10,7 @@ lang: en-GB
 
 <p style="text-align: center;">
 <code style="font-weight: bold;">
-[Main](https://kbaqer.com/index.html) // [Contact](https://kbaqer.com/index.html#contact)
+[Main](https://kbaqer.com) // [Contact](https://kbaqer.com/#contact)
 </code> 
 </p>
 
@@ -61,5 +61,5 @@ C8F0 A0B5 D9C3 4D00 82A7 1ACB C33D 4801 C264 9BEC
 
 ## Research
 
-Research output will be located at the following page: <b>[Research](research/index.html)</b>.
+Research output will be located at the following page: <b>[Research](research)</b>.
 

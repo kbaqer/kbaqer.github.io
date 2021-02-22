@@ -5,7 +5,7 @@ pagetitle: Research | kbaqer.com
 
 <p style="text-align: center;">
 <code style="font-weight: bold;">
-[Main](https://kbaqer.com/index.html) // [Contact](https://kbaqer.com/index.html#contact)
+[Main](https://kbaqer.com) // [Contact](https://kbaqer.com/#contact)
 </code> 
 </p>
 
@@ -15,7 +15,7 @@ pagetitle: Research | kbaqer.com
 # Papers
 * **Reconciling Multiple Objectives \-- Politics or Markets?**, International Workshop on Security Protocols 2017, SPW25. \[[PDF](https://www.cl.cam.ac.uk/~rja14/Papers/reconciling-multiple-objectives.pdf)\] \[[Blog](https://www.lightbluetouchpaper.org/2018/09/05/how-protocols-evolve/)\].
   
-* **DigiTally: offline payments** [\[project page\]](DigiTally/index.html) 
+* **DigiTally: offline payments** [\[project page\]](DigiTally) 
   
 * **Stressing Out: Bitcoin \"Stress Testing\"**, 3rd Workshop on Bitcoin and Blockchain Research (2016) [\[PDF\]](../papers/BHMW16.pdf) [\[Slides\]](../presentations/bitcoin2016.pdf)
   
