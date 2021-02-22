@@ -10,9 +10,10 @@ lang: en-GB
 
 <p style="text-align: center;">
 <code style="font-weight: bold;">
-[Main](https://kbaqer.com/index.html) // [Contact](https://kbaqer.com/index.html/#contact)
+[Main](https://kbaqer.com/index.html) // [Contact](https://kbaqer.com/index.html#contact)
 </code> 
 </p>
+
 <!-- 
 <p style="text-align: center;">
 <code>
