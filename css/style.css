@@ -1,6 +1,6 @@
-::selection { background:yellow; }
+::selection { background:black; color: white; }
 /* mozilla firefox */
-::-moz-selection { background:yellow; }
+::-moz-selection { background:black; color: white; }
 
 
 
@@ -156,10 +156,10 @@ hr {
 /* }  */
 
 
-
 code
 {
   width: 80ch;
+  white-space : pre-wrap !important;
   /* font-weight: bold; */
   font-family: Consolas, Menlo, Monaco, "Courier New", Courier, monospace; /* I prefer SF Mono on macOS */
 
@@ -169,8 +169,7 @@ pre {
   width: 80ch;
   font-family: Consolas, Monaco, Menlo, "Courier New", Courier, monospace; /* I prefer SF Mono on macOS */
   /* background-color: black; */
-  white-space: pre;
-  white-space: pre-wrap;
+  white-space: pre-wrap; !important;
   word-wrap: break-word;
   font-size: 0.9em;
   /* font-weight: bold; */
@@ -340,6 +339,7 @@ table td {
   }
 
   pre, blockquote {
+	 width=80char
     border: 1px solid #999;
     padding-right: 1em;
     page-break-inside: avoid;

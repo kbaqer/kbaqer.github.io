@@ -11,7 +11,7 @@ lang: en-GB
 <p style="text-align: center;">
 <code style="font-weight: bold;">
 [Main](https://kbaqer.com) // [Contact](https://kbaqer.com/#contact)
-</code> 
+</code>
 </p>
 
 <!-- 
