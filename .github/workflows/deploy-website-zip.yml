@@ -1,0 +1,65 @@
+name: Deploy website ZIP to GitHub Pages
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download website ZIP
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p package site
+
+          gh release download "$TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --pattern 'kbaqer.com_*.zip' \
+            --dir package
+
+          count="$(find package -maxdepth 1 -type f -name 'kbaqer.com_*.zip' | wc -l | tr -d ' ')"
+
+          if [ "$count" -ne 1 ]; then
+            echo "Expected exactly one kbaqer.com_*.zip release asset; found $count."
+            exit 1
+          fi
+
+          zipfile="$(find package -maxdepth 1 -type f -name 'kbaqer.com_*.zip' -print -quit)"
+
+          unzip -q "$zipfile" -d site
+
+          if [ ! -f site/index.html ]; then
+            echo "Website ZIP must contain index.html at the ZIP root."
+            exit 1
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
